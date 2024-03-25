@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{% static 'single_page/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Koyo Nakayama</h1>
+        <img src="{% static 'single_page/images/IMG_0909.JPG' %}" alt="Portrait of Koyo Nakayama">
+    </header>
+    <main>
+        <section class="objective">
+            <h2>Objective</h2>
+            <p>Dedicated and accomplished Electrical and Electronic Engineering graduate with a Master's degree seeking a challenging role in a dynamic environment. Experienced in cutting-edge research, I have specialized in developing advanced algorithms, particularly in medical image segmentation. My expertise extends to data engineering, BI system development, and QA automation in web development. I am eager to apply my skills and contribute to innovative projects, leveraging my technical proficiency and research background.</p>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Master of Engineering in Electrical and Electronic Engineering - <a href="https://www.tuat.ac.jp/en/" target="_blank">Tokyo University of Agriculture and Technology</a> (2017-2019)</li>
+                <li>Bachelor of Science in Electrical and Electronic Engineering - <a href="https://www.utsunomiya-u.ac.jp/en/" target="_blank">Utsunomiya University</a> (2013-2017)</li>
+            </ul>
+        </section>
+        <section class="publications">
+            <h2>Publications</h2>
+            <ul>
+                <li>Conference paper (Abstract-Reviewed) - Koyo Nakayama, Atsushi Saito, Elijah Biggs, Marius George Linguraru, Akinobu Shimizu, “Segmentation from a pediatric CT volume based on joint optimization with a conditional statistical shape model”, <a href="https://biomedicalimaging.org/" target="_blank">The IEEE International Symposium on Biomedical Imaging</a>, Apr 8-11, 2019.</li>
+                <li>Journal publication (Peer-Reviewed) - Koyo Nakayama, Atsushi Saito, Elijah Biggs, Marius George Linguraru, Akinobu Shimizu, <a href="https://link.springer.com/article/10.1007/s11548-019-01929-x" target="_blank">“Liver segmentation from low-radiation-dose pediatric computed tomography using patient-specific, statistical modeling”</a>, <a href="https://link.springer.com/journal/11548" target="_blank">International Journal of Computer Assisted Radiology and Surgery</a>, vol. 14, 2019, pp. 2057-2068.</li>
+                <li>Conference paper (Peer-Reviewed) - Atsushi Saito, Koyo Nakayama, Antonio R. Porras, Awais Mansoor, Elijah Biggs, Marius George Linguraru, Akinobu Shimizu, <a href="https://link.springer.com/chapter/10.1007/978-3-030-00934-2_75" target="_blank">“Construction of a Spatiotemporal Statistical Shape Model of Pediatric Liver from Cross-Sectional Data”</a>, <a href="http://www.miccai.org/" target="_blank">Medical Image Computing and Computer Assisted Intervention</a>, Sep. 16-20, 2018, pp. 676-683.</li>
+            </ul>
+        </section>
+        <section class="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>Data Analyst - <a href="https://www.ambl.co.jp/" target="_blank">AMBL Inc.</a> (2023-Present)</li>
+                <li>Process Improvement Engineer - <a href="https://global.honda/jp/" target="_blank">Honda Motor Co, Ltd.</a> (2019-2023)</li>
+            </ul>
+        </section>
+        <section class="certifications">
+            <h2>Certification Badges</h2>
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/98222970" alt="Certification Badge 3">
+            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/97991555" alt="Certification Badge 4">
+            <img src="{% static 'single_page/images/aws-certified-cloud-practitioner.png' %}" alt="Certification Badge 1">
+            <img src="{% static 'single_page/images/image_20240324164810.png' %}" alt="Certification Badge 5">
+            <img src="{% static 'single_page/images/tableau-desktop-specialist.png' %}" alt="Certification Badge 2">
+            <img src="{% static 'single_page/images/image_20240324164826.png' %}" alt="Certification Badge 6">
+        </section>
+    </main>
+</body>
+</html>
