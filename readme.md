@@ -27,6 +27,37 @@ sudo chmod o+x /home/djangoadmin/
 
 This command grants execute permissions to other users on the `/home/djangoadmin/` directory.
 
+- Create a `local_settings.py` file in the same directory as your `settings.py` file. Set the following variables:
+
+    ```python
+    # myprofile/myprofile/local_settings.py
+
+    SECRET_KEY = 'your_secret_key'
+    DEBUG = False
+    ALLOWED_HOSTS = ['your_domain.com', 'your_IP_address']
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'your_database_name',
+            'USER': 'your_database_user',
+            'PASSWORD': 'your_database_password',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
+    ```
+
+- In your `settings.py` file, set the `STATIC_ROOT` variable to define where Django should collect static files:
+
+    ```python
+    # myprofile/myprofile/settings.py
+
+    STATIC_ROOT = BASE_DIR / 'static'
+    ```
+
+After completing these steps, you should be able to successfully deploy your Django project.
+
 ### Configuration Note
 
 Depending on your project structure, you may need to configure the Nginx `location` block for serving static files differently. If your static files are located in a subdirectory within the project directory, you should use the `alias` directive instead of the `root` directive.
