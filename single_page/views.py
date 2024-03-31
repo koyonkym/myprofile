@@ -22,12 +22,12 @@ def generate_plot_div(queryset):
         df['w_predicted_score'] = df['total_score'].apply(map_writing_score)
 
         # Create traces for listening and reading (first y-axis)
-        trace1 = go.Scatter(x=df.index, y=df['l_score'], opacity=0.8, mode='lines+markers', name='Listening', yaxis='y1', line=dict(color='#3366CC'))
-        trace2 = go.Scatter(x=df.index, y=df['r_score'], opacity=0.8, mode='lines+markers', name='Reading', yaxis='y1', line=dict(color='#109618'))
+        trace1 = go.Scatter(x=df.index, y=df['l_score'], opacity=0.8, mode='lines+markers', name='L', yaxis='y1', line=dict(color='#3366CC'))
+        trace2 = go.Scatter(x=df.index, y=df['r_score'], opacity=0.8, mode='lines+markers', name='R', yaxis='y1', line=dict(color='#109618'))
 
         # Create traces for speaking and writing (second y-axis)
-        trace3 = go.Scatter(x=df.index, y=df['s_predicted_score'], opacity=0.8, mode='lines+markers', name='Speaking', yaxis='y2', line=dict(color='#FF9900', dash='dot'))
-        trace4 = go.Scatter(x=df.index, y=df['w_predicted_score'], opacity=0.8, mode='lines+markers', name='Writing', yaxis='y2', line=dict(color='#990099', dash='dot'))
+        trace3 = go.Scatter(x=df.index, y=df['s_predicted_score'], opacity=0.8, mode='lines+markers', name='S', yaxis='y2', line=dict(color='#FF9900', dash='dot'))
+        trace4 = go.Scatter(x=df.index, y=df['w_predicted_score'], opacity=0.8, mode='lines+markers', name='W', yaxis='y2', line=dict(color='#990099', dash='dot'))
 
         # Define layout with two y-axes
         layout = go.Layout(

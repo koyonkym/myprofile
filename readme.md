@@ -72,6 +72,52 @@ location /static/ {
 
 This ensures that Nginx correctly serves static files from the specified directory.
 
+## Deployment (Second Time)
+
+After making changes to the project, you can update the deployed version by following these steps:
+
+1. Pull the latest changes from the GitHub repository:
+
+    ```bash
+    git pull origin main
+    ```
+
+    If you encounter the error message `error: Your local changes to the following files would be overwritten by merge:`, and those files don't need to be kept (such as files in the `__pycache__` directory), you can discard the local changes by running:
+
+    ```bash
+    git checkout -- <file_path>
+    ```
+
+    Then, proceed to pull the changes again.
+
+2. Activate the virtual environment:
+
+    ```bash
+    source .venv/bin/activate
+    ```
+
+3. Install packages:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Apply any database migrations:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+    This step is necessary if there are any updates in the models.
+
+5. Collect static files:
+
+    ```bash
+    python manage.py collectstatic
+    ```
+
+    If there are any updates regarding static files, this step ensures they are collected and served correctly.
+
 ## Additional Notes
 
 - Replace placeholder text and images with your own content.
