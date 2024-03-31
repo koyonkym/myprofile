@@ -68,9 +68,26 @@
             <a href="https://www.credly.com/badges/fc43f199-fd61-4b42-917b-e23446333baa/public_url" target="_blank"><img src="{% static 'single_page/images/tableau-desktop-specialist.png' %}" alt="Certification Badge 5"></a>
             <a href="https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/N3ZQZis4dTNGZHl0K3lwMExIOUc3QT09" target="_blank"><img src="{% static 'single_page/images/image_20240324164826.png' %}" alt="Certification Badge 6"></a>
         </section>
+        <section class="languages">
+            <h2>Languages</h2>
+            <div id="language-list">
+                <div class="language-item">
+                    <h3>Japanese</h3>
+                    <p>Level: Native</p>
+                </div>
+                <div class="language-item">
+                    <h3>English</h3>
+                    <p>Level: Independent User</p>
+                    <p>Description: The figure below visualizes the transition of my TOEIC score. <a href="https://www.ets.org/toeic.html" target="_blank">TOEIC</a> stands for Test of English for International Communication and is a standardized test designed to assess the English language proficiency of non-native speakers in professional and business contexts. I have only taken the TOEIC listening and reading sections. Speaking and writing scores are predicted from their scores based on <a href="https://www.iibc-global.org/hubfs/library/default/toeic/official_data/sw/pdf/score_comparison_list.pdf" target="_blank">information from IIBC</a>, which operates the TOEIC. According to <a href="https://www.iibc-global.org/toeic/official_data/toeic_cefr.html" target="_blank">additional information from IIBC</a>, my latest scores correspond to CEFR B2 level for listening, reading, and writing, and B1 level for speaking, indicating that I am an independent user of English.</p>
+                    <div id="english-cefr-level">
+                        {{ plot_div | safe }}
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
         <p>This profile page is powered by <a href="https://www.djangoproject.com/" target="_blank">Django</a> and developed by Koyo Nakayama.</p>
-    </footer>    
+    </footer>
 </body>
 </html>
