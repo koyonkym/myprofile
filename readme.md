@@ -118,6 +118,28 @@ After making changes to the project, you can update the deployed version by foll
 
     If there are any updates regarding static files, this step ensures they are collected and served correctly.
 
+## Enabling HTTPS Connection
+
+To secure your Django profile project with HTTPS, follow these steps:
+
+### 1. Setup DNS
+Before enabling HTTPS, you need to configure DNS settings for your domain. Follow the instructions provided in the [DigitalOcean DNS Quickstart Guide](https://docs.digitalocean.com/products/networking/dns/getting-started/quickstart/) and [DNS Registrar Guide](https://docs.digitalocean.com/products/networking/dns/getting-started/dns-registrars/) to set up DNS for your domain.
+
+### 2. Create Nginx Server Block
+After configuring DNS, set up an Nginx server block to handle HTTPS connections. Refer to Step 5 of the [How To Install Nginx on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04#step-5-%E2%80%93-setting-up-server-blocks-(recommended)) tutorial to create and configure a server block for your domain.
+
+Make sure not to include the following configuration block to avoid conflicts with the `gunicorn.sock` path:
+```nginx
+location / {
+    try_files $uri $uri/ =404;
+}
+```
+
+### 3. Secure Nginx with Let's Encrypt
+Once your server block is configured, secure Nginx with Let's Encrypt to enable HTTPS encryption. Follow the steps outlined in the [How To Secure Nginx with Let's Encrypt on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04) tutorial to obtain and install SSL/TLS certificates for your domain.
+
+By completing these steps, you'll have successfully enabled HTTPS connection for your Django profile project, ensuring secure communication between your server and clients.
+
 ## Additional Notes
 
 - Replace placeholder text and images with your own content.
