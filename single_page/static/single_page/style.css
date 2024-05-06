@@ -45,18 +45,124 @@ li {
   margin-bottom: 5px;
 }
 
-a {
-  color: #007bff; /* Blue color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-a:hover {
-  color: #0056b3; /* Darker blue color on hover */
-}
-
 .certifications img {
   width: 100px;
   margin-right: 10px;
   object-fit: contain;
+}
+
+.section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-top: .5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+a, dd, div, dt, dl, h2, h3, p, section {
+  box-sizing: border-box;
+}
+
+.section h2 {
+  top: -.85em;
+  margin: 0;
+  padding-right: .5rem;
+}
+
+.section h2 {
+  background: #fff;
+}
+
+.section h2 {
+  position: absolute;
+}
+
+.section h2 {
+  line-height: 1.5;
+}
+
+dd, dt, h2, h3, p {
+  letter-spacing: -.01em;
+}
+
+/* dd, dt, h2, h3 {
+  max-width: 30em;
+} */
+
+.card dd, .card dt, dd, dt, h2, h3, p {
+  font-size: 1.25rem;
+}
+
+.subsection {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subsection h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card dd, .card dt, .subsection h3, .subsection-content p {
+  line-height: 1.5;
+}
+
+.subsection .subsection-content {
+  padding-left: 1rem;
+}
+
+dl {
+  list-style-type: none;
+}
+
+.card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dd, p {
+  font-weight: 300;
+}
+
+a {
+  /* color: #000; */
+  color: #333;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:hover {
+  background: #e3e3ff;
+}
+
+/* .subsection-content p {
+  max-width: 34em;
+} */
+
+.subsection-content p {
+  margin-top: 0;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #333;
+}
+
+body {
+  color: #333;
 }

@@ -6,6 +6,10 @@ This is a README.md file for the **My Profile Project**.
 
 This project serves as my personal profile website, showcasing my skills, background, and achievements.
 
+## Design Reference
+
+The design of the profile page is referenced from [seanoshea.me](https://seanoshea.me/).
+
 ## Deployment
 
 To deploy this project, follow the steps outlined in the DigitalOcean tutorial:
